@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Inicial CSS</title>
+</head>
+<body>
+    <header>
+        <h1>Estructura básica de CSS</h1>
+    </header>
+    
+    <main>
+        <h2>Punto 1</h2>
+        <h3>Respondo Consignas</h3>
+
+        <p>1.1- ¿Qué significa CSS? 
+            <br>- CSS (Cascading Style Sheets) significa, hojas de estilo en cascada.
+        </p>
+
+        <p> 2 - ¿Para qué sirve el CSS? ¿Qué programa se utiliza para interpretar el CSS? <br>
+
+            - El CSS es un lenguaje de hojas de estilo, se utiliza para estilos de texto muy básicos, <br>
+            para crear efectos de animación, como también convertir una columna de texto en una <br> 
+            composición con un área de contenido principal y una barra lateral. <br>
+
+            - el programa que se utiliza son navegadores web como Chrome, Firefox, Safari, etc.
+        </p>
+
+        <p> 3- ¿A qué se llama regla de CSS? <br>
+            - Se le llama reglas de CSS a un conjunto de propiedades y valores que se aplicarán a una <br>
+            o varias etiquetas. Está compuesta por los elementos: Selector - Declaración - Propiedades <br>
+            - Valor de la Propiedad. 
+        </p>
+        
+        <p> 4- ¿Cuál es la anatomía de la regla de CSS? Agregar imagen explicativa y utilizando una lista <br>
+            descriptiva explicar sus elementos. <br>
+            <dl>
+                <dt><strong>Selector</strong></dt>
+                <dd>Selecciona el(los) elemento(s) a dar estilo (en este caso, los elementos < p> ). <br>
+                     Para dar estilo a un elemento diferente, solo cambia el selector.
+                </dd>
+                <dt><strong>Declaración</strong></dt>
+                <dd>Aplica las propiedades que querés dar al elemento seleccionado en el Selector. <br>
+                    En este caso hay una sola regla, pero puede haber más.
+                </dd>
+                <dt><strong>Propiedades</strong></dt>
+                <dd>Es lo que te permite dar un estilo a un elemento HTML. En el ejemplo la propiedad es <br>
+                    color que le dará color a las letras de los párrafos. Siempre las propiedades se ubicarán <br>
+                    a la izquierda.
+                </dd>
+                <dt><strong>Valor de la Propiedad</strong></dt>
+                <dd>las propiedades deben tener un valor. Cada propiedad tiene valores definidos. Cada valor <br>
+                    se ubicará a la derecha.
+                </dd>
+            </dl>
+        </p>
+        <img src="./assets/img/reglacss.png" alt="reclacss" width="400px">
+
+        <p> 5- ¿Qué es un selector en CSS? <br>
+            - Un selector se utiliza para aplicar estilos a elementos HTML específicos. Esto permite un diseño <br>
+            web preciso, especialmente util cuando un documento HTML contiene múltiples etiquetas iguales pero <br>
+            con contenido diferente. 
+        </p>
+
+        <p> 6- Identificar y definir los selectores: de ID, de clases, universal, de etiquetas, descendente.
+            <dl>
+                <dt><strong>Selector de ID</strong></dt>
+                <dd>
+                    Este selector lo aplicaremos a un único elemento HTML de nuestra página. Esto se debe a que el atributo <br>
+                    ID de HTML identifica a un elemento HTML por medio de un nombre. Por ejemplo: <br>
+                    < h1 id="titulo">Título Principal</ h1> <br>
+                    Para aplicar CSS solamente a ID titulo, tendremos que seleccionar dicho ID utilizar el # seguido del nombre: <br>
+                    <br>
+                     #titulo {
+                        color: violet;
+                     } <br>
+                    De la misma forma que el caso anterior, podemos seleccionar un elemento basado en el id. Por ejemplo: <br>
+                    <br>
+                     a#titulo {
+                         color: red;
+                     }
+                    <br>
+                    En el ejemplo anterior se aplicará la propiedad color a la etiqueta a (anchor) que tenga el ID #titulo.
+                </dd>
+                <dt><strong>Selector de Clases</strong></dt>
+                <dd>
+                    Los selectores de clases comienzan siempre por un . (punto). Los clientes web (navegadores) identifican <br>
+                    este punto y lo distinguen del resto de los selectores. Por ejemplo: <br>
+                    <br>
+                    <p class="primer-parrafo">Texto de un párrafo</p>
+                    
+                    Para definir en HTML el uso de los selectores de clase, se utiliza el atributo class. <br>
+                    En css se aplica así: <br>
+                    
+                    .primer-parrafo { <br>
+                        font-size: 2em; <br>
+                    }
+                    <br>
+                    A todas las etiquetas que tengan la clase primer-parrafo, se aplicará un font-size (tamaño de letra) específico. <br>
+                    <br>
+                    Las clases pueden ser utilizadas varias veces y en distintas etiquetas, lo que nos hace pensar que es necesario <br>
+                    ver cuales son la características que queremos aplicar a las etiquetas que sean comunes a varias.
+                    <br>
+                    A su vez, podemos seleccionar un conjunto de etiquetas que selecione todas las etiquetas que tengan una clase particular. <br>
+                    <br>
+                    p.primer-parrafo { <br>
+                        color: #445544; <br>
+                    }
+                    <br>
+                    En el ejemplo anterior, seleccionamos todos los párrafos que tengan la clase primer-parrafo y le aplicamos un color de letra <br>
+                    especial.
+
+                </dd>
+                <dt><strong>Selector Descente</strong></dt>
+                <dd>
+                    Con este selector seleccionamos un elemento que está dentro de otro del mismo tipo. Estos seectores siempre están <br>
+                    formados por dos o más selectores separados entre si. El último selector será el elemento HTML al que se le aplicará <br>
+                    las propiedades de CSS. Por ejemplo: <br>
+                    p span { <br>
+                        color:green; <br>
+                    }
+                </dd>
+                <dt><strong>Selector por Etiquetas</strong></dt>
+                <dd>
+                    Aplicamos propiedades CSS a una etiqueta. La misma se identifica sin utilizar < >. Por ejemplo. <br>
+                    p { <br>
+                        color:red; <br>
+                    } <br>
+                    Podemos, seleccionar varias etiquetas al mismo tiempo concatenándolas con el signo , (coma). Por ejemplo: <br>
+                    p,h1 { <br>
+                        color:red; <br>
+                    } <br>
+                    En el ejemplo anterior, tanto la p como la h1 tendrán de color de letra roja. Reordar que se aplicarán a todas las etiquetas <br>
+                    del documento HTML.
+
+                </dd>
+                <dt><strong>Selector Universal</strong></dt>
+                <dd>
+                    Nos permite aplicar estilos a todos los elementos HTML de un documento y se indica mediante el *. <br>
+                    * { <br>
+                        color:red; <br>
+                    } <br>
+                    Todos los elementos HTML tendrán un color de texto red.
+                </dd>
+            </dl>
+        </p>
+
+        <p> 7- Explicar brevemente utilizando una lista ordenada: ¿cómo funciona el CSS? <br>
+            <dl>
+                <dt><strong>Paso 1</strong></dt>
+                <dd>El navegador carga el HTML (por ejemplo, lo recibe de la red).</dd>
+                <dt><strong>Paso 2</strong></dt>
+                <dd>Convierte el HTML en un DOM (Modelo de objetos del documento). El DOM representa el documento en la memoria del ordenador.</dd>
+                <dt><strong>Paso 3</strong></dt>
+                <dd>Entonces, el navegador va a buscar la mayor parte de los recursos vinculados al documento HTML, como las imágenes y los <br>
+                    videos incrustados... ¡y también el CSS vinculado!</dd>
+                <dt><strong>Paso 4</strong></dt>
+                <dd>El navegador analiza el CSS y ordena en diferentes «cubos» las diferentes reglas según el tipo de selector. <br>
+                    Para cada tipo de selector que encuentre, calcula qué reglas deben aplicarse y a qué nodos en el DOM se les aplica el <br>
+                    estilo según corresponda (este paso intermedio se llama árbol de renderización).</dd>
+                <dt><strong>Paso 5</strong></dt>
+                <dd>El árbol de renderización presenta la estructura en que los nodos deben aparecer después de aplicarle las reglas.</dd>
+                <dt><strong>Paso 6</strong></dt>
+                <dd>En la pantalla se muestra el aspecto visual de la página (esta etapa se llama pintura).</dd>
+            </dl>
+        </p>
+        <img src="./assets/img/cssreglas.svg" alt="cssreglas" width="400px">
+
+        <p> 8- ¿Cuáles son las tres formas para vincular CSS con HTML? <br>
+            <ul>
+                <li><em><u>Estilo en linea (Inline CSS) :</u></em></li>
+                 Se aplica directamente a un elemento con el atributo <strong>style</strong> . <br>
+                Es rápido para estilos específicos, pero es dificil de manejar. <br>
+                <li><em><u>Estilo interno (Internal CSS) :</u></em></li> 
+                 Se define en una etiqueta <strong>< style> </strong> en el <strong>< head> </strong> . Aplica estilos a varios elementos <br>
+                en la misma página y no se utiliza en otras páginas. <br> 
+                <li><em><u>Estilo externo (Externo CSS) :</u></em></li>
+                 Se usa un archivo CSS vinculado con <strong>< link></strong> . Facilita el mantenimiento y es reutilizable, pero requiere <br>
+                carga adicional del archivo.
+            </ul>
+        </p>
+
+        <p> 9- •Escribir la URL de los dos diseños seleccionados y responder: las etiquetas dentro de body <br>
+             ¿son iguales? ¿Qué es lo distinto? ¿Qué contribuye al cambio de diseño? <br>
+             URL del 1er diseño es <a href="https://csszengarden.com/057/" target="_blank"> primer diseño </a>
+             URL del 2do diseño es <a href="https://csszengarden.com/218/" target="_blank"> segundo diseño </a>
+
+             ·El HTML es igual, lo que cambia es su CSS. 
+             ·El mismo HTML puede tener distintos diseños.
+        </p>
+        
+        <h2>Punto 2</h2>
+        <h3>Respondo Consignas</h3>
+        <table>
+
+            <tr>
+                <th colspan="3"></th>
+            </tr>
+            <tr>
+                <th>Propiedad</th>
+                <th>Descripción</th>
+                <th>Valores Posibles</th>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>• Define el color del texto.</td> 
+                <td> color: red - color: #090 - color: rgb(34, 12, 64, 0.6)</td>
+            </tr>
+            <tr>
+                <td>background-color</td>
+                <td>• Define el color de fondo de un elemento.</td> 
+                <td> background-color: teal - background-color: rgb(153, 102, 153) - background-color: #777799 </td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>• Define el tamaño de la fuente del texto.</td> 
+                <td> font-size: xx-small - font-size: larger </td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>• Define el grosor de la fuente del texto <br> (por ejemplo, si se trata de texto en negrita o normal).</td>
+                <td> <strong>valores clave: </strong> font-weight: normal - font-weight: bold </td>
+            </tr>
+            <tr>
+                <td> font-style</td>
+                <td>• Define el estilo de la fuente del texto <br> (por ejemplo, si es cursiva o normal).</td>
+                <td> <strong>valores clave: </strong> font-style: italic - font-style: normal </td>
+            </tr>
+            <tr>
+                <td> font-family</td>
+                <td>• Define el tipo de letra a utilizar para <br> el texto.</td>
+                <td> <strong>valores clave: </strong> font-family: Times - font-family: fantasy - font-family: "Lucida Console"</td>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>• Define la alineación horizontal del texto <br> (izquierda, centro o derecha).</td>
+                <td> <strong>valores clave: </strong> text-align: start - text-align: end  - text-align: justify </td>
+            </tr>
+            <tr>
+                <td>text-decoration</td>
+                <td>• Define la decoración del texto (por ejemplo, <br> si está subrayado o tachado).</td>
+                <td> <strong>valores clave: </strong> text-decoration: none; * Sin decoración * <br>
+                - text-decoration:underline red * Subrayado rojo *  <br>
+                - text-decoration: underline wavy red; * Subrayado rojo ondulado * </td>
+            </tr>
+            <tr>
+                <td>text-transform</td>
+                <td>• Define la transformación del texto (por ejemplo, <br> en mayúsculas o minúsculas).</td>
+                <td> <strong>valores clave: </strong>
+                text-transform: capitalize - text-transform: none </td>
+            </tr>
+            <tr>
+                <td>letter-spacing</td>
+                <td>• Define el espacio entre letras.</td>
+                <td>letter-spacing: normal - letter-spacing:0cap <br></td>
+            </tr>
+            <tr>
+                <td>line-height</td>
+                <td>• Define la altura de línea del texto.</td>
+                <td> <br>* Keyword value *:  line-height: normal - 
+                    * Unitless values: usa esta cifra multiplicada por  <br>
+                el tamaño de fuente del elemento *: line-height: 3.5 </td>
+            </tr>
+
+            
+        </table>
+
+    </main>
+    <footer>
+        <p> Gómez Elisabet - 4to 1era </p>
+    </footer>
+</body>
+</html>

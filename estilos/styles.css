@@ -1,0 +1,17 @@
+/* comentario de css*/
+header {
+    background-color: rgb(92, 136, 218);
+}
+/* selector por ID */
+#p2 {
+    color: rgba(100, 114, 237, 0.856);
+    font-size: 1.9em; /* tamaño de fuente */
+    text-align: center;
+    font-weight: 500;
+}
+#p3 {
+    color: sienna;
+    font-style:italic ;
+    font-family: ;
+    letter-spacing:0cap;
+}
