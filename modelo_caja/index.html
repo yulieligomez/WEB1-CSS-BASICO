@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelo de cajas</title>
+    <style>
+        header {
+            background-color: rgb(176, 230, 203);
+            width: 100px; /* ancho */
+            height: 70px;/* alto */
+            border-top:5px solid cadetblue;
+            border-bottom:5px solid cadetblue; 
+           
+        }
+        header div {
+            font-size: 45px;
+        }
+        main table tr th {
+            background-color: darkseagreen;
+            width: 50px;
+            height: 50px;
+            border: 6px solid forestgreen;
+            width: 100px;
+            height: 70px;
+            /* eliminar el espacio entre bordes */
+           
+        }
+        table {
+            border-spacing: 0px;
+            border-style: solid;
+            /*margin: 55px 125px;  55px top y bottom / 125px right y left*/
+            /*margin: 20px 35px 45px;  top right - left bottom*/
+            margin: 10px 20px 30px 40px; /*top - right - bottom - left*/
+            padding: 45px;
+           
+        }
+    </style>
+</head>
+<body>
+    <!-- cajas -->
+     <header>
+        <!-- una caja div con la letra r con un font_size de 2.5em -->
+         <div>
+            R
+         </div>
+     </header>
+     <main>
+        <table>
+            <tr>
+                <th>color</th>
+                <th>numero</th>
+                <th>letra</th>
+            </tr>
+            <tr>
+                <td>azul</td>
+                <td>2</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>verde</td>
+                <td>7</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>rojo</td>
+                <td>6</td>
+                <td>A</td>
+            </tr>
+
+        </table>
+
+     </main>
+</body>
+</html>
