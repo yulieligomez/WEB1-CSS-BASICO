@@ -1,0 +1,87 @@
+/*Estilos de la actividad 2*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 15px;
+    text-transform: capitalize;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.producto {
+    text-align: left;
+    width: 240px;
+    height: 240px;
+    justify-content: space-between;
+}
+
+.vendido {
+    color: #2766c4;
+    background-color: #e6f1fc;
+    border-radius: 3px;
+    width: 110px;
+    padding: 4px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.imagen {
+    position: relative;
+}
+
+.corazon {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+}
+
+.boton {
+    position: absolute;
+    color: white;
+    background-color: #0053e2;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 30px;
+    padding: 10px;
+    bottom: 0px;
+    font-weight: 700;
+}
+
+.precio {
+    color: #348807;
+    font-size: 18px;
+    margin-top: 50px;
+    font-weight: 900;
+}
+
+.precio span {
+    color: gray;
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
+.precio2 {
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 50px;
+}
+
+.estrellas {
+    display: flex;
+    text-align: left;
+    font-size: 14px;
+    gap: 5px;
+    align-items: center;
+    color: #58595e;
+
+}
+
+.texto {
+    font-weight: 300;
+    color: #58595e;
+    margin-top: 10px;
+}

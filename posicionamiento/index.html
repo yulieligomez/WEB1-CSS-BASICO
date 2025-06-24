@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <!-- 
+1. ¿Cuál es la diferencia principal entre position relative y position absolute?
+-la principal diferencia es, en position relative el elemento se ajusta/desplaza al elemento padre(documento) y en position absolute
+el elemento se posiciona en un lugar específico dentro del contenedor principal, el elemento se sale del flujo normal de la pagina
+pero no afecta el diseño de este.
+
+2. ¿Qué valor de position se utiliza por defecto para los elementos HTML?
+- se utiliza el position static(estático).
+
+3. ¿Qué propiedad se utiliza para establecer la capa de apilamiento de elementos superpuestos?
+-se utiliza el Z - index.
+
+4. ¿Cuándo se utiliza position fixed en CSS?
+-se utiliza para cuando queremos que un elemento quede fijo en un documeno, incluso si desplaza la pagina. Es similar al absolute,
+pero a diferencia de este, en el fixed el elemento se posiciona en relación con la ventana del navegador.
+
+5. ¿Cómo se comporta un elemento con position sticky al desplazarse?
+-el elemento sticky al desplazarse funciona como si fuera relative hasta que llega a una posicion definida y ahi se queda fijo como
+si fuese fixed.
+
+6. ¿Cuál es el valor de position adecuado para un elemento que se desea que siga el flujo normal del documento?
+-para esto se utiliza el position relative.
+
+7. ¿Cuál es la forma más común de mover un elemento con position relative?
+-un elemento se mueve con las propiedades top, bottom, left o right.
+
+8. ¿En qué casos se puede utilizar z-index para controlar el orden de apilamiento de elementos?
+-se usa en casos donde queremos que los elementos queden apilados.
+
+9. ¿Qué sucede cuando dos elementos tienen el mismo valor de z-index? Prueba su resultado y responde.
+- Cuando dos elementos tiene el mismo valor de z-index el primer elemento queda de bajo del segundo elemento.
+
+10. ¿Cuál es la principal diferencia entre position sticky y position fixed?
+- la principal diferencia es que el fixed no se mueve, se queda fijo a la pagina y el sticky se desplaza hasta quedar en una posicion
+fija. Uno se mueve hasta quedar fijo y el otro solo queda fijo, no se mueve.
+
+11. En el siguiente ejemplo, ¿el valor top y right es en relación a qué elemento?
+- el valor top y right son en relacion al body.
+
+12. En el ejemplo anterior ¿qué agregarías para que la caja hija esté dentro de la caja padre?
+- se agrega un position: relative; al contenedor, ya que la caja tiene un position: absolute; .
+
+-->
+    <h2>ACTIVIDAD POSICIONAMIENTO</h2>
+
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgb(196, 196, 196);
+            position: relative;
+            width: 400px;
+            height: 400px;
+            
+        }
+
+        .box1 {
+            background-color: lightcoral;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 0px;
+            left: 0px;
+        }
+
+        .box2 {
+            background-color: lightgreen;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 0px;
+            right: 0px;
+        }
+
+        .box3 {
+            background-color: mediumpurple;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .box4 {
+            background-color: yellow;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+    <main>
+        <div class="container">
+            <div class="box box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>

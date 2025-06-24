@@ -1,0 +1,37 @@
+.container {
+    font-size: 2em;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(17, 97, 17);
+
+}
+
+.botones a {
+    background-color: darkgrey;
+    gap: 5px;
+    border-radius: 10px;
+    padding: 0px;
+    font-weight: 300;
+    text-decoration: none;
+    width: 200px;
+}
+
+section {
+
+}
+
+@media screen and (width >=768px) {
+    .container {
+        font-size: 2em;
+        color: beige;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+
+}
